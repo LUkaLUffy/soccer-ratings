@@ -96,12 +96,6 @@ def register():
         flash("You didnt register :( ", category="danger")
     return render_template("register.html", form = form)
 
-@app.route('/detail/<int:id>')
-def detail(id):
-    current = Product.query.get(id)
-
-    return render_template("details.html", product=current)
-
 @app.route("/login",  methods =["GET", "POST"])
 def login():
     form = LoginF()
