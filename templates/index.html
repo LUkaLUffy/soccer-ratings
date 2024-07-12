@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block headindex %}
+        <title>DAVALEBA 8</title>
+        <style>
+            h3{
+                text-align: right;
+            }
+            h4{
+                text-align: left;
+            }
+        </style>
+{% endblock %}
+{% block bodyindex%}
+        <div class="container">
+            
+                {% for playerdict in footballers.values(): %}
+                {% set img = playerdict["link"] %}
+                <div class="row " style="display: inline-block;" >
+                <div class="col" style="display: flex; justify-content: space-evenly;">
+                    <div class="card" style="width: 18rem;">
+                        <img src= "{{img}}" class="card-img-top" alt="bLA" >
+                        <div class="card-body">
+                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                All Info
+                           </a>
+                           <div class="collapse" id="collapseExample">
+                               <div class="card card-body">
+                                 {{ playerdict["info"] }}
+                               </div>
+                           </div>
+                        </div>
+                    </div>                 
+                </div>
+            </div>
+                {% endfor %}
+            </div>
+            <hr>
+          </div>
+{% endblock %}

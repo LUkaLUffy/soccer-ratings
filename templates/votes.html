@@ -1,0 +1,37 @@
+    {% extends "layout.html" %}
+
+    {% block headdiscount %}
+
+    {% endblock %}
+
+
+    {% block bodydiscount %}
+
+
+
+    <div class="container" >
+        <div>
+            <ul>
+                <li>allister</li><li>camavinga</li><li>debruin</li><li>fernandez</li><li>gabriel</li><li>haaland</li><li>havertz</li><li>kvara</li>
+                <li>messi</li><li>miqautadze</li><li>musiala</li><li>rashford</li><li>saka</li><li>van</li>
+    
+            </ul>
+        </div>
+            <form method="post" style="text-align: center; display: flex; flex-direction: column; width: 30%;" class="form-addreview" > 
+
+                {{ form.hidden_tag() }}
+                
+                {{ form.vote.label }}
+                &nbsp
+                {{ form.vote(class="form-content") }}
+                <br>
+                
+                &nbsp
+                {{ form.use }}
+
+            </form>
+        </div>
+    </div>
+
+
+    {% endblock %}
